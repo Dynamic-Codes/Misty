@@ -1,0 +1,20 @@
+{
+  "name": "misty",
+  "version": "0.0.1",
+  "description": "The mist that surrounds a vibin cloud. Official bot for DisVibes!",
+  "main": "src/main.js",
+  "scripts": {
+    "test": ""
+  },
+  "keywords": [
+    "bot"
+  ],
+  "author": "Dynamic-Codes",
+  "license": "ISC",
+  "dependencies": {
+    "canvacord": "^5.4.8",
+    "discord.js": "^14.8.0",
+    "dotenv": "^16.0.3",
+    "mongoose": "^7.0.3"
+  }
+}
