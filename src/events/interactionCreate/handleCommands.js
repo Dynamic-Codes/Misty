@@ -33,9 +33,9 @@ module.exports = async (client, interaction) => {
       } 
     }
 
-    if (commandObject.permissionsRequired?.length) {
-      for (const permission of commandObject.permissionsRequired) {
-        if (!interaction.member.permission.has(permission)) {
+    if (commandObject.PermissionsRequired?.length) {
+      for (const permission of commandObject.PermissionsRequired) {
+        if (!interaction.member.permissions.has(permission)) {
           interaction.reply({
             content: 'Insufficent permissions to run this command!',
             ephemeral: true
@@ -45,11 +45,11 @@ module.exports = async (client, interaction) => {
       }
     }
 
-    if (commandObject.botPermissions?.length) {
-      for (const permission of commandObject.botPermissions) {
+    if (commandObject.BotPermissions?.length) {
+      for (const permission of commandObject.BotPermissions) {
         const bot = interaction.guild.members.me
 
-        if (!bot.permission.has(permission)) {
+        if (!bot.permissions.has(permission)) {
           interaction.reply({
             content: "I don't have enough permissions to perform this command!",
             ephemeral: true
