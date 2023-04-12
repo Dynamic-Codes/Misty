@@ -73,5 +73,4 @@ module.exports = async (client, message) => {
   countServer.save()
   countUser.save()
 
-  
 };
