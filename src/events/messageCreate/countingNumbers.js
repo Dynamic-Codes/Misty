@@ -57,13 +57,14 @@ module.exports = async (client, message) => {
       }).then(webhook => console.log(`Created webhook ${webhook}`))
     }
 
+    await message.delete()
+
     await webhook.send({
       content: message.content,
       username: message.author.username,
       avatarURL: message.author.displayAvatarURL({ formate: 'png', size: 512 })
     });
 
-    message.delete()
   } catch (error) {
     console.log(error)
     return message.channel.send('An error occured whilst creating cloudhook!')
